@@ -7,10 +7,7 @@ For purpose of exemplify, let us assume that we want to run the code:
 ```
 Solve[{x == y - 13, y == 4 x + 23}]
 ```
-To install the Wolframscript app download it from:
-[https://reference.wolfram.com/language/workflow/InstallWolframScript.html](https://reference.wolfram.com/language/workflow/InstallWolframScript.html)
-
-To check if it is installed, run the command the terminal `wolframscript -code 2+2`, and something equivalent to 
+To install the Wolframscript app download it from [here](https://reference.wolfram.com/language/workflow/InstallWolframScript.html). To check if it is installed, run the command the terminal `wolframscript -code 2+2`, and something equivalent to 
 ![Test Image 1](Fig_wolframscript_is_ok.png)
 But, if you get something like
 ![Test Image 1](Fig_error.png)
@@ -41,7 +38,11 @@ Then we `Save as...`using the Mathematica framework and we chose save as `.wls`
 We use the terminal to run the command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
 * File_to_copy.wls = "Solving_equation_with_WS"
 * Destinatian_to_copy = "My_destination_on_the_cluster"
-For instance, `scp /WLS_files_local/Solving_equation_with_WS.wls WLS_files_cluster`
+
+For instance, 
+```
+scp /WLS_files_local/Solving_equation_with_WS.wls WLS_files_cluster
+```
 
 Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the .wls files. For example,
 ```
@@ -60,7 +61,7 @@ wolframscript -script Solving_equation_with_WS.wls
 ```
 to print the output directly to the console. More information about how to save the output could be consulted on More about of copy the output in [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file).
 
-
+Questions and/or corrections about this repository are more than welcome! please send them to coencoria@wisc.edu 
 
 
 
