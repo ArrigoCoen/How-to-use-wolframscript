@@ -1,6 +1,6 @@
 # How-to-use-wolframscript
 
-Wolframscript is a tool to run Mathematica through the terminal. In this repo I will present how I use R to generate automatically .wls files to run Mathematica code in a remote cluster.
+Wolframscript is a tool to run Mathematica through the terminal. In this repo I will present how I use R to generate automatically .wls files to run Mathematica code in a remote cluster. The R function could are in the file `Function.R` of this repository.
 
 For purpose of exemplify, let us assume that we want to run the code:
 
@@ -35,7 +35,10 @@ Then we use the Mathematica `Save as...` interface, and chose `.wls`
 
 ## Coping the file to the destination on the cluster
 
-We use the terminal to run the command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
+Since we are assuming that the files will be run on a cluster, we will use the Terminal to copy the files. First, we present how to copy a file using the Terminal, and second we explain how to use R to manipulate the Terminal to copy a file. This two options could be sound to much trouble to something that is as easy as a `ctl+c, ctl+v` but since we are assuming the use of a remote cluster, both options could be helpful. 
+
+### Using the Terminal to copy the file
+Now, we need to copy the files in folder of the cluster that we will use. Here, we will copy them using R to manipulate the Terminal. To this end we the Terminal command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
 * File_to_copy = "Solving_equation_with_WS"
 * Destinatian_to_copy = "My_destination_on_the_cluster"
 
@@ -49,6 +52,18 @@ Moreover, if you have a folder with all your .wls files and you want to copy all
 cd "WLS_files_local"
 scp *.wls WLS_files_cluster
 ```
+
+### Using R to copy the file
+
+In this second methodology of copy a file, we use the function `copy_using_Terminal` function. For that, we use the next code:
+```
+folder_nb_file <- "WLS_files_local"
+file_to_copy <- "Solving_equation_with_WS.wls"
+path_of_the_copied_file <-  "Folder_of_cluster"
+copy_using_Terminal(file_to_copy, folder_nb_file, path_of_the_copied_file)
+```
+This function internally runs the command `system`, that controls the Terminal using R.
+
 ## Running the .wls and saving the output
 
 Finally, to run the .wls files using the terminal command 

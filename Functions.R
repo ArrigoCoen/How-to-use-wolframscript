@@ -60,8 +60,8 @@ gen_nb_file <- function(file_name,text_to_run,folder_nb_file, add_print=T,add_da
   text_to_run <- paste0(c("(*\n",nb_comments,"\n*)\n\n",text_to_run,"\n"))
   file_name <- paste0(c(folder_nb_file,"/",file_name,".nb"),collapse = "")
   
-  cat(text_to_run)
-  # write.table(text_to_run, file=file_name, append = F, sep = "", dec = ".",row.names = F, col.names = F, quote = FALSE)
+  # cat(text_to_run)
+  write.table(text_to_run, file=file_name, append = F, sep = "", dec = ".",row.names = F, col.names = F, quote = FALSE)
   cat("The file ",file_name," was generated\n")
 }
 
@@ -78,6 +78,45 @@ gen_nb_file(file_name,text_to_run,folder_nb_file, add_print=T)
 
 
 # asoueth -----------------------------------------------------------------
+
+
+#' Copy a file throug Terminal using R
+#'
+#' @param file_to_copy 
+#' @param folder_nb_file 
+#' @param path_of_the_copied_file 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+copy_using_Terminal <- function(file_to_copy,folder_nb_file,path_of_the_copied_file) {
+  file_and_path <- paste(c(folder_nb_file,"/",file_to_copy))
+  terminal_command <- paste0(c("scp ",file_and_path," ",path_of_the_copied_file),collapse = "")
+  system(terminal_command)
+  cat("The file ",file_and_path," was copy on the folder ",path_of_the_copied_file, "\n")
+}
+
+folder_nb_file <- "WLS_files_local"
+file_to_copy <- "Solving_equation_with_WS.wls"
+path_of_the_copied_file <-  "Folder_of_cluster"
+
+copy_using_Terminal(file_to_copy,folder_nb_file,path_of_the_copied_file)
+
+
+
+# astueh ------------------------------------------------------------------
+
+
+terminal_command <- "wolframscript -code 2+2"
+
+system(terminal_command)
+# system("ls")
+
+
+
+
+# saoueh ------------------------------------------------------------------
 
 
 

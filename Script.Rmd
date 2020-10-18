@@ -36,3 +36,11 @@ Now, we could run the function `gen_nb_file` to generate the `.nb` files
 gen_nb_file(file_name,text_to_run,path_nb_file, add_print=F)
 ```
 
+
+## Copy the files throug Terminal using R
+
+```{r}
+folder_nb_file <- "WLS_files_local"
+file_to_copy <- "Solving_equation_with_WS.wls"
+path_of_the_copied_file <-  "Folder_of_cluster"
+```
