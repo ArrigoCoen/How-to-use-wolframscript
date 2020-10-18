@@ -14,20 +14,42 @@ To check if it is installed, run the command the terminal `wolframscript -code 2
 ![Test Image 1](Fig_wolframscript_is_ok.png)
 But, if you get something like
 ![Test Image 1](Fig_error.png)
-you don't have installed Wolframscript using the download page [https://reference.wolfram.com/language/workflow/InstallWolframScript.html](https://reference.wolfram.com/language/workflow/InstallWolframScript.html).
+you don't have installed Wolframscript.
 
-## Generating a .nb file
+## Generating a .wls file
 
 Since we will manipulate Mathematica using R, we assume that we have an script in R with
 ```
 text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
 path_nb_file <- "/Users/arrigocoen/Dropbox/1 How to/How-to-use-wolframscript"
+file_name <- "Solving_equation_with_WS"
 ```
 Now, we could use the function `gen_nb_file` using the command
 ```
-gen_nb_file(text_to_run,path_nb_file, add_print=F)
+gen_nb_file(file_name,text_to_run,path_nb_file, add_print=F)
 ```
-where the last variable tells the function if it need to add the command `Print[... ]`to the .nb file.
+where the last variable tells the function if it need to add the command `Print[... ]`to the .nb file. After running this last R function we get a file like
+![Test Image 1](Fig_error.png)
+
+Since Wolframscript uses .wls, we need to transform the .nb file into a .wls file. To do this, open the .nb and select the cell and initialize it.
+![Test Image 1](Fig_error.png)
+Then we `Save as...`using the Mathematica framework and we chose save as `.wls`
+![Test Image 1](Fig_error.png)
+
+## Coping the file to the destination on the cluster
+
+We use the terminal to run the command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
+* File_to_copy.wls = "Solving_equation_with_WS"
+* Destinatian_to_copy = "My_destination_on_the_cluster"
+
+Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the .wls files
+
+## Running the .wls and saving the output
+
+
+
+
+
 
 
 
