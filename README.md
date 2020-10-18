@@ -1,5 +1,14 @@
 # How-to-use-wolframscript
 
+Wolframscript is a tool to run Mathematica through the terminal. In this repo I will present how I use R to generate automatically .wls files to run Mathematica code in a remote cluster.
+
+For purpose of exemplify, let us assume that we want to run the code:
+
+```
+Solve[{x == y - 13, y == 4 x + 23}]
+```
+
+
 First, I can't use wolframscript at the terminal, since I get the message
  
 ![Test Image 1](Fig_error.png)
