@@ -15,7 +15,7 @@ you don't have installed Wolframscript.
 
 ## Generating a .wls file
 
-Since we will manipulate Mathematica using R, we assume that we have an script in R with
+Since we will manipulate Mathematica using R, we assume that we have an script in R with the variables
 ```
 text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
 path_nb_file <- "/WLS_files_local"
@@ -25,26 +25,26 @@ Now, we could use the function `gen_nb_file` using the command
 ```
 gen_nb_file(file_name,text_to_run,path_nb_file, add_print=F)
 ```
-where the last variable tells the function if it need to add the command `Print[... ]`to the .nb file. After running this last R function we get a file like
+where the last variable adds the text `Print[... ]`to the `.nb` file. After running this last R function we get a file like
 ![Test Image 1](Fig_error.png)
 
-Since Wolframscript uses .wls, we need to transform the .nb file into a .wls file. To do this, open the .nb and select the cell and initialize it.
+Since Wolframscript uses .wls, we need to transform the `.nb` file into a `.wls` file. To do this, open the `.nb` and select the cell and initialize it.
 ![Test Image 1](Fig_error.png)
-Then we `Save as...`using the Mathematica framework and we chose save as `.wls`
+Then we use the Mathematica `Save as...` interface, and chose `.wls`
 ![Test Image 1](Fig_error.png)
 
 ## Coping the file to the destination on the cluster
 
 We use the terminal to run the command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
-* File_to_copy.wls = "Solving_equation_with_WS"
+* File_to_copy = "Solving_equation_with_WS"
 * Destinatian_to_copy = "My_destination_on_the_cluster"
 
-For instance, 
+In this last case, we get, 
 ```
 scp /WLS_files_local/Solving_equation_with_WS.wls WLS_files_cluster
 ```
 
-Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the .wls files. For example,
+Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the `.wls` files. For example,
 ```
 cd "WLS_files_local"
 scp *.wls WLS_files_cluster
