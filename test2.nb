@@ -1,0 +1,2 @@
+In[22]:=
+Print[RandomInteger[{1,6},2]]
