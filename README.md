@@ -21,7 +21,7 @@ you don't have installed Wolframscript.
 Since we will manipulate Mathematica using R, we assume that we have an script in R with
 ```
 text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
-path_nb_file <- "/Users/arrigocoen/Dropbox/1 How to/How-to-use-wolframscript"
+path_nb_file <- "/WLS_files_local"
 file_name <- "Solving_equation_with_WS"
 ```
 Now, we could use the function `gen_nb_file` using the command
@@ -41,13 +41,24 @@ Then we `Save as...`using the Mathematica framework and we chose save as `.wls`
 We use the terminal to run the command `scp`. This command uses the structure `scp File_to_copy.wls Destinatian_to_copy`for instance, we could use the variables:
 * File_to_copy.wls = "Solving_equation_with_WS"
 * Destinatian_to_copy = "My_destination_on_the_cluster"
+For instance, `scp /WLS_files_local/Solving_equation_with_WS.wls WLS_files_cluster`
 
-Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the .wls files
-
+Moreover, if you have a folder with all your .wls files and you want to copy all: first, step on the folder using the `cd` command of the terminal, and second use `File_to_copy.wls = "*.wls"`. The asterisk will allow us to copy all the .wls files. For example,
+```
+cd "WLS_files_local"
+scp *.wls WLS_files_cluster
+```
 ## Running the .wls and saving the output
 
-
-
+Finally, to run the .wls files using the terminal command 
+```
+wolframscript -script Solving_equation_with_WS.wls > out_Solving_equation_with_WS.txt
+```
+This las command, tells Wolframscript to run the file ` Solving_equation_with_WS.wls` and save the output as the .txt file `out_Solving_equation_with_WS.txt`. Also one could use the command 
+```
+wolframscript -script Solving_equation_with_WS.wls 
+```
+to print the output directly to the console. More information about how to save the output could be consulted on More about of copy the output in [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file).
 
 
 
