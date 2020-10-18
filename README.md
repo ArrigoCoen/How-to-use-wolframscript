@@ -8,6 +8,23 @@ For purpose of exemplify, let us assume that we want to run the code:
 Solve[{x == y - 13, y == 4 x + 23}]
 ```
 
+## Generating a .nb file
+
+Since we will manipulate Mathematica using R, we assume that we have an script in R with
+```
+text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
+path_nb_file <? "/Users/arrigocoen/Dropbox/1 How to/How-to-use-wolframscript"
+```
+Now, we could use the function `gen_nb_file` using the command
+```
+gen_nb_file(text_to_run,path_nb_file, add_print=F)
+```
+where the last variable tells the function if it need to add the command `Print[... ]`to the .nb file.
+
+
+
+
+
 
 First, I can't use wolframscript at the terminal, since I get the message
  
