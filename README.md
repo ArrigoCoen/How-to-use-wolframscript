@@ -29,9 +29,9 @@ where the last variable adds the text `Print[... ]`to the `.nb` file. After runn
 ![Test Image 1](Figures/Fig_new_nb.png)
 
 Since Wolframscript uses .wls, we need to transform the `.nb` file into a `.wls` file. To do this, open the `.nb` and select the cell and initialize it.
-![Test Image 1](Fig_error.png)
+![Test Image 1](Figures/Fig_initialization_of_a_cell.png)
 Then we use the Mathematica `Save as...` interface, and chose `.wls`
-![Test Image 1](Fig_error.png)
+![Test Image 1](Figures/Fig_save_as_wls.png)
 
 ## Coping the file to the destination on the cluster
 
