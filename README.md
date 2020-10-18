@@ -17,16 +17,16 @@ you don't have installed Wolframscript.
 
 Since we will manipulate Mathematica using R, we assume that we have an script in R with the variables
 ```
-text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
-path_nb_file <- "/WLS_files_local"
+text_to_run <- "Solve[{x == y - 13, y == 4 x + 234}]"
+folder_nb_file <- "WLS_files_local"
 file_name <- "Solving_equation_with_WS"
 ```
 Now, we could use the function `gen_nb_file` using the command
 ```
-gen_nb_file(file_name,text_to_run,path_nb_file, add_print=F)
+gen_nb_file(file_name,text_to_run,folder_nb_file, add_print=T)
 ```
-where the last variable adds the text `Print[... ]`to the `.nb` file. After running this last R function we get a file like
-![Test Image 1](Fig_error.png)
+where the last variable adds the text `Print[... ]`to the `.nb` file. After running this last R function we get a `.nb` file like
+![Test Image 1](Figures/Fig_new_nb.png)
 
 Since Wolframscript uses .wls, we need to transform the `.nb` file into a `.wls` file. To do this, open the `.nb` and select the cell and initialize it.
 ![Test Image 1](Fig_error.png)
@@ -61,10 +61,13 @@ wolframscript -script Solving_equation_with_WS.wls
 ```
 to print the output directly to the console. More information about how to save the output could be consulted on More about of copy the output in [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file).
 
+Following this methodology we should get a `.txt`file like this:
+![Test Image 1](Fig_error.png)
+
 Questions and/or corrections about this repository are more than welcome! please send them to coencoria@wisc.edu 
 
 
-
+# Stuff to erase
 
 
 

@@ -1,0 +1,38 @@
+---
+title: "Running Wolframscript using R"
+author: "Arrigo Coen"
+date: "10/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Here is presented an example of how to run a **Mathematica** script using Wolframscript using R to generate the needed files. For more details on using this example see see <https://github.com/ArrigoCoen/How-to-use-wolframscript>.
+
+In this example we want to obtain the output of the command `Solve[{x == y - 13, y == 4 x + 23}]`
+
+First, we charge the functions that we use
+```{r}
+source("Functions.R")
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
+path_nb_file <- "/WLS_files_local"
+file_name <- "Solving_equation_with_WS"
+```
+
+Now, we could run the function `gen_nb_file` to generate the `.nb` files
+
+```{r}
+gen_nb_file(file_name,text_to_run,path_nb_file, add_print=F)
+```
+
