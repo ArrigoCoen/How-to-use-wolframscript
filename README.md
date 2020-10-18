@@ -7,13 +7,21 @@ For purpose of exemplify, let us assume that we want to run the code:
 ```
 Solve[{x == y - 13, y == 4 x + 23}]
 ```
+To install the Wolframscript app download it from:
+[https://reference.wolfram.com/language/workflow/InstallWolframScript.html](https://reference.wolfram.com/language/workflow/InstallWolframScript.html)
+
+To check if it is installed, run the command the terminal `wolframscript -code 2+2`, and something equivalent to 
+![Test Image 1](Fig_wolframscript_is_ok.png)
+But, if you get something like
+![Test Image 1](Fig_error.png)
+you don't have installed Wolframscript using the download page [https://reference.wolfram.com/language/workflow/InstallWolframScript.html](https://reference.wolfram.com/language/workflow/InstallWolframScript.html).
 
 ## Generating a .nb file
 
 Since we will manipulate Mathematica using R, we assume that we have an script in R with
 ```
 text_to_run <- "Solve[{x == y - 13, y == 4 x + 23}]"
-path_nb_file <? "/Users/arrigocoen/Dropbox/1 How to/How-to-use-wolframscript"
+path_nb_file <- "/Users/arrigocoen/Dropbox/1 How to/How-to-use-wolframscript"
 ```
 Now, we could use the function `gen_nb_file` using the command
 ```
