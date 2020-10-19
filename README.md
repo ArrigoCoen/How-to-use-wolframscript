@@ -8,9 +8,9 @@ For purpose of exemplify, let us assume that we want to run the code:
 Solve[{x == y - 13, y == 4 x + 23}]
 ```
 To install the Wolframscript app download it from [here](https://reference.wolfram.com/language/workflow/InstallWolframScript.html). To check if it is installed, run the command the terminal `wolframscript -code 2+2`, and something equivalent to 
-![Test Image 1](Fig_wolframscript_is_ok.png)
+![Test Image 1](Figures/Fig_wolframscript_is_ok.png)
 But, if you get something like
-![Test Image 1](Fig_error.png)
+![Test Image 1](Figures/Fig_error.png)
 you don't have installed Wolframscript.
 
 ## Generating a .wls file
