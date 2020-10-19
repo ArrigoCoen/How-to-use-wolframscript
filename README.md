@@ -74,7 +74,7 @@ This las command, tells Wolframscript to run the file ` Solving_equation_with_WS
 ```
 wolframscript -script Solving_equation_with_WS.wls 
 ```
-to print the output directly to the console. More information about how to save the output could be consulted on More about of copy the output in [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file).
+to print the output directly to the console. More information about how to save the output could be consulted on More about of how to copy the output using the Terminal could be consulted in [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file).
 
 ### Running the wolfromscript using R
 
