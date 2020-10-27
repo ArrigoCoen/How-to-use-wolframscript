@@ -1,6 +1,6 @@
 # How to use Wolframscript (with R)
 
-Wolframscript is a tool to run Mathematica through the terminal. In this repo I will present how I use R to generate automatically `.wls` files to run Mathematica using Wolframscript in a remote cluster or in the Terminal. The R function could are in the file `Function.R` of this repository. The file `Script.Rmd` contains also an step-by-step R Markdown of this repository.
+Wolframscript is a tool to run Mathematica through the terminal. In this repo I will present how I use R to generate automatically `.wls` files to run Mathematica using Wolframscript in a remote cluster or in the Terminal. The R function could are in the file `Function.R` of this repository. The file `Script.Rmd` contains also a step-by-step R Markdown of this repository.
 
 For purpose of exemplify, let us assume that we want to run the code:
 
@@ -88,7 +88,7 @@ wls_file_to_run <- "Solving_equation_with_WS.wls"
 output_name <- "output_Solving_equation_with_WS.txt"
 rut_Terminal_using_R(folder_files_wls, wls_file_to_run, output_name)
 ```
-This function uses the `system`command to run the wolframscript.
+This function uses the `system`command to run the wolframscript. See also the file `Script.Rmd`, since it contains also a step-by-step R Markdown of this repository.
 
 
 
