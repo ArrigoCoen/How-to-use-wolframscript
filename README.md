@@ -14,7 +14,7 @@ But, if you get something like
 ![Test Image 1](Figures/Fig_error.png)
 you don't have installed Wolframscript.
 
-In some cases, at least in mine, you could need a `Free Wolfram Engine for Developers`. This is a free license that you could get form [here](https://www.wolfram.com/engine/free-license/?%3Chttps://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwolfram.com%2Fengine%2Ffree-license%3F&data=04%7C01%7Cbhuebner%40morgridge.org%7Cec799b77553c463f305f08d87a92bb09%7C0362dd0ad16940fe8c3682ebc19e2e70%7C0%7C0%7C637394117935521630%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=YGuoGsHedpMVip44msbA7Ejc6vuuJZQTx7qiY0nxQ84%3D&reserved=0). Moreover, you could need is the `Wolfram Engine` from [here](https://www.wolfram.com/engine/).
+In some cases, at least in mine, you could need a `Free Wolfram Engine for Developers`. This is a free license that you could get form [here](https://www.wolfram.com/engine/free-license/?%3Chttps://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwolfram.com%2Fengine%2Ffree-license%3F&data=04%7C01%7Cbhuebner%40morgridge.org%7Cec799b77553c463f305f08d87a92bb09%7C0362dd0ad16940fe8c3682ebc19e2e70%7C0%7C0%7C637394117935521630%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=YGuoGsHedpMVip44msbA7Ejc6vuuJZQTx7qiY0nxQ84%3D&reserved=0). Moreover, you could need is the `Wolfram Engine` from [here](https://www.wolfram.com/engine/), and follow the steps of [here](https://support.wolfram.com/46070).
 
 ## Generating a .wls file
 
